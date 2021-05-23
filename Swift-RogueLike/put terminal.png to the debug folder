@@ -1,0 +1,6 @@
+in order to build this demo
+please put the terminal.png
+to the debug folder, where the executable is
+
+if the debug folder does not contain the terminal.png
+the app would crash on the first line of "tcod.flush()"

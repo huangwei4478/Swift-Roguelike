@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E8032CA2659675600201D25 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8032C92659675600201D25 /* Entity.swift */; };
+		0E8032CC2659D83F00201D25 /* InputAndReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8032CB2659D83F00201D25 /* InputAndReader.swift */; };
+		0E8032CE2659EDD900201D25 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8032CD2659EDD900201D25 /* Map.swift */; };
 		0EB9406E2656C2330042BB30 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9406D2656C2330042BB30 /* main.swift */; };
 		0EB940762656C3320042BB30 /* libtcod.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EB940752656C3320042BB30 /* libtcod.dylib */; };
 		0EB9407C2656C3B10042BB30 /* TCOD-Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9407B2656C3B10042BB30 /* TCOD-Wrapper.swift */; };
@@ -25,6 +28,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E8032C72659622600201D25 /* terminal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = terminal.png; sourceTree = "<group>"; };
+		0E8032C82659624D00201D25 /* put terminal.png to the debug folder */ = {isa = PBXFileReference; lastKnownFileType = text; path = "put terminal.png to the debug folder"; sourceTree = "<group>"; };
+		0E8032C92659675600201D25 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		0E8032CB2659D83F00201D25 /* InputAndReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputAndReader.swift; sourceTree = "<group>"; };
+		0E8032CD2659EDD900201D25 /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		0EB9406A2656C2330042BB30 /* Swift-RogueLike */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Swift-RogueLike"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB9406D2656C2330042BB30 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0EB940752656C3320042BB30 /* libtcod.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libtcod.dylib; sourceTree = "<group>"; };
@@ -67,8 +75,13 @@
 			children = (
 				0EB9407D2656C69B0042BB30 /* Swift-RogueLike.entitlements */,
 				0EB9406D2656C2330042BB30 /* main.swift */,
+				0E8032CB2659D83F00201D25 /* InputAndReader.swift */,
 				0EB940772656C37A0042BB30 /* Swift-RogueLike-Bridging-Header.h */,
 				0EB9407B2656C3B10042BB30 /* TCOD-Wrapper.swift */,
+				0E8032C92659675600201D25 /* Entity.swift */,
+				0E8032C72659622600201D25 /* terminal.png */,
+				0E8032C82659624D00201D25 /* put terminal.png to the debug folder */,
+				0E8032CD2659EDD900201D25 /* Map.swift */,
 			);
 			path = "Swift-RogueLike";
 			sourceTree = "<group>";
@@ -139,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E8032CE2659EDD900201D25 /* Map.swift in Sources */,
 				0EB9406E2656C2330042BB30 /* main.swift in Sources */,
+				0E8032CC2659D83F00201D25 /* InputAndReader.swift in Sources */,
 				0EB9407C2656C3B10042BB30 /* TCOD-Wrapper.swift in Sources */,
+				0E8032CA2659675600201D25 /* Entity.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

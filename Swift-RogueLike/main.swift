@@ -15,29 +15,33 @@ let height: Int32 = 40
 tcod.initRoot(w: width, h: height, title: title)
 tcod.consoleClear()
 
-var playerx: Int32 = width / 2
-var playery: Int32 = height / 2
-tcod.putChar(x: playerx, y: playery, char: "@")
-tcod.flush()
+let gameMap = GameMap(width: width, height: height)
+let player = Entity(x: width / 2, y: height / 2, char: "@", color: stcodFuscia)
+let npc = Entity(x: width / 2 - 5, y: height / 2 - 1, char: "N", color: stcodBlue)
+var ents = [player, npc]
+
+var retVal = [String: (Int32, Int32)]()
+var (chgx, chgy) = (Int32(0), Int32(0))
 
 while (tcod.windowisClosed() == false) {
     guard tcod.chkKeypress() else { continue }
-    
-    switch (tcod.key.vk) {
-    case TCODK_UP:
-        playery -= 1
-    case TCODK_DOWN:
-        playery += 1
-    case TCODK_LEFT:
-        playerx -= 1
-    case TCODK_RIGHT:
-        playerx += 1
-    default:
-        continue
+    retVal = keyReader()
+    for key in retVal.keys {
+        if key == "move" {
+            (chgx, chgy) = retVal["move"] ?? (0, 0)
+            if !gameMap.isBlockedAt(x: player.px + chgx, y: player.py + chgy) {
+                player.move(x: chgx, y: chgy)
+            }
+        }
+        if key == "exit" {
+            tcod.quit()
+            exit(0)
+        }
     }
     
     tcod.consoleClear()
-    tcod.putChar(x: playerx, y: playery, char: "@")
+    drawAll(ents: ents)
     tcod.flush()
+    clearAllEnts(ents: ents)
 }
 
